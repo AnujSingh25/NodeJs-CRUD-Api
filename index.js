@@ -8,8 +8,6 @@ const app = express()
 
 app.use(bodyparser.json())
 
-
-
 app.get('/', function (req, res) {
     res.send('Hello World')
 })
