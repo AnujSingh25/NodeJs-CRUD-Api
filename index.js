@@ -12,7 +12,12 @@ app.get('/', function (req, res) {
     res.send('Hello World')
 })
 
-app.get('/add', userCtrl.addUser)
+app.get('/users', userCtrl.getUsers)
+app.get('/users/:id', userCtrl.getUser)
+
+app.post('/users', userCtrl.postUsers)
+
+app.delete('/users/:id', userCtrl.delUsers)
 
 app.listen(3000, () => {
     console.log('Server is listening');
